@@ -8,13 +8,14 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Skillznet') }}</title>
+    <title>{{ config('app.name', 'FFSD') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <script src="{{ asset('dashboard/dashboard.js') }}" defer></script>
     <script src="{{ asset('dashboard/side_nav.min.js') }}" defer></script>
+
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -24,6 +25,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('/font/css/all.css')}}">
     <link href="{{asset('dashboard/dashboard.css')}}" rel="stylesheet">
+
     <style>
 
 
@@ -50,7 +52,10 @@
                     <!-- top nav bar -->
 
                     @include('layouts.top_nav')
-                    <div class="container-fluid">
+                    <div class="container-fluid mt-3">
+                        <div class='mt-3'>
+
+                        </div>
 
 
 
@@ -62,5 +67,30 @@
 
 
     </div>
+
+
+    <div class="footer">
+
+
+    </div>
+
+    <script>
+        //add fadeout class for alert
+const timeout =2000;
+
+        document.addEventListener('DOMContentLoaded', function(){
+
+
+    setTimeout(() => {
+        var alertItems =document.querySelectorAll('.alert');
+        alertItems.array.forEach(element => {
+            element.classList.remove('show');
+
+        });
+
+
+    }, timeout);
+        })
+    </script>
 </body>
 </html>

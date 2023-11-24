@@ -23,7 +23,7 @@
                     <div class="d-md-flex input-contain">
                         <div class="input-group m-1 text-center">
 
-                            <span class="input-group-text"><i class='fa fa-user'></i></span><input type="text" class="form-control" name ='first_name' placeholder="FIRST NAME" id='first_name'>
+                            <span class="input-group-text"><i class='fa fa-user'></i></span><input type="text" class="form-control @error('first_name') is-invalid @enderror" name ='first_name' placeholder="FIRST NAME" id='first_name' value="{{ old('first_name') }}" required autocomplete="first_name" placeholder="FIRST NAME">
                             @error('first_name')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -34,7 +34,7 @@
                         <div class="input-group m-1">
 
 
-                        <span class="input-group-text"><i class='fa fa-user'></i></span> <input id="last_name" type="text" class="form-control @error('last_name') is-invalid @enderror" name="lastname" value="{{ old('last_name') }}" required autocomplete="last_name" placeholder="LAST NAME">
+                        <span class="input-group-text"><i class='fa fa-user'></i></span> <input id="last_name" type="text" class="form-control @error('last_name') is-invalid @enderror" name="last_name" value="{{ old('last_name') }}" required autocomplete="last_name" placeholder="LAST NAME">
                         @error('last_name')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -45,7 +45,7 @@
                         <div class="d-md-flex input-contain">
                             <div class="input-group text-center m-1">
 
-                        <span class="input-group-text"><i class='fa fa-user'></i></span> <input type="text" class="form-control" name ='username' placeholder="USER NAME" id='username'>
+                        <span class="input-group-text"><i class='fa fa-user'></i></span> <input type="text" class="form-control @error('username') is-invalid @enderror" name ='username' id='username' value="{{ old('username') }}" required autocomplete="last_name" placeholder="USER NAME">
 
                         @error('username')
                         <span class="invalid-feedback" role="alert">
@@ -78,7 +78,7 @@
                                 </div>
                                 </div>
                                 <div class= 'input-contain'>
-                                    <input type="checkbox" name="confirm" id="check" class='form-check-inline'><span class='text w-50'>I have accepted Skillznet <span style="color: orange">Terms and Conditions</span></span>
+                                    <input type="checkbox" name="confirm" id="check" class='form-check-inline'><span class='text w-50'>I have accepted Skillznet <span style="color: orange" required>Terms and Conditions</span></span>
 
                                 </div>
                                 <div class='form-group input-contain'>

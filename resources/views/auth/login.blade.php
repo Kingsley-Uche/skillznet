@@ -9,6 +9,7 @@
         <div class=" d-none d-sm-block col-md-6" id='id' ></div>
 
         <div class="contain  col-12 col-md-6 container bg-white" >
+            <div class='fa-pull-left'><a href="{{route('blog')}}" class='btn btn-primary' ><i  class="fa fa-chevron-left text-small"> </i> GO TO BLOG </a></div>
             <div class='fa-pull-right'><a href="{{route('register')}}" class='btn btn-primary'>CREATE ACCOUNT <i  class="fa fa-chevron-right text-small"> </i></a></div>
             <form method="POST" action="{{ route('login') }}">
                 @csrf
