@@ -1,6 +1,7 @@
 # ffsd
 # This blog application was developed by olekamma Kingsley Uche as an assesment answer to FFSD Lagos.
 # This apllication is a laravel application.
+# After cloning, cd into the document root and run 'composer update' 
 # The database sql table has been exported and put inthe database folder and the migrations are in the database folder ie ffsd/database.sql.
 # Since it is a test application, the database details as follows;
 # database name: ffsd
